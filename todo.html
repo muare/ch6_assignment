@@ -16,10 +16,7 @@
 <body>
     <div id="app">
         <p><strong>Tasks:</strong> {{tasks_num}}</p>
-        <input type="text" v-model="task" @keyup.enter="onEnter">
-        <div class="round_corner" v-for="(ltask,id) in tasks" :key="id">
-            <p>{{ltask}}</p>
-        </div>
+        <taskcompound :tasks=tasks @add_task="addNewTask"></taskcompound>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="main.js"></script>
